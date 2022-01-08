@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+body {
+  background: var(--color-section);
+  z-index: 1;
+}
+
+:root {
+  /*======= Color =======*/
+  --color-section: rgba(242, 246, 255, 100%);
+  --color-text: rgba(255, 255, 255, 100%);
+  --color-text2: rgba(51, 51, 51, 100%);
+  --color-link: rgba(58, 109, 240, 100%);
+  --color-link-hover: rgba(84, 198, 252, 100%);
+
+  /*======= Font =======*/
+  --title-font-size: 1.75rem;
+  --text-font1-size: 1rem;
+  --text-font: 'Lexend Deca', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font: 600 var(--title-font-size) var(--text-font);
+}
+
+p {
+  font: 300 var(--text-font1-size) var(--text-font);
+}
+
+/*======= Logo =======*/
+.logo {
+  display: flex;
+  width: 1.82rem;
+  margin-top: 1rem;
+}
+
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+
+/*======= Navegation =======*/
+nav {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+/*======= Mostrar menu  =======*/
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--color-section);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+nav.show .manu ul {
+  display: grid;
+}
+
+nav.show ul.grid {
+  gap: 5rem;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+/*======= Toggle menu =======*/
+.toggle {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+  transition: 0.2s;
+}
+
+nav.show div.icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+}
+
+.menu a {
+  display: grid;
+  margin-top: 5rem;
+}
+
+.title {
+  text-align: center;
+  color: var(--color-link);
+  font: 600 var(--title-font-size) var(--text-font);
+  -webkit-font-smothing: auto;
+  transition: 0.3s;
+}
+
+a.title:hover {
+  color: var(--color-link-hover);
+}
+
+/*======= Background =======*/
+
+.back1 {
+  background: url(./assets/background.jpg) no-repeat center/cover;
+  width: 100vw;
+  height: 570px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+/*============== Section1 ==============*/
+.boximg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*======= Linkedin/Github =======*/
+.icon1 {
+  width: 2rem;
+}
+
+.iconSocial {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 6rem;
+}
+
+div.iconSocial a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+div.iconSocial a:hover {
+  transform: translateY(-6px);
+}
+
+/*======= Logo Gama =======*/
+.logogama {
+  width: 20rem;
+}
+
+.boxlgama {
+  margin-left: 6rem;
+  margin-top: 6rem;
+}
+
+/*======= Sobre =======*/
+.boxsobre {
+  margin-top: 6rem;
+}
+
+.sobre h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font: 600 var(--title-font-size) var(--text-font);
+  color: var(--color-text);
+}
+
+p.text1 {
+  color: var(--color-text);
+  letter-spacing: 2px;
+}
+
+.text {
+  font: 300 var(--text-font1-size) var(--text-font);
+  color: var(--color-text);
+}
+
+.textlinks {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font: 400 var(--text-font1-size) var(--text-font);
+  color: var(--color-text);
+}
+
+.links1 {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+.links1:hover {
+  color: var(--color-link-hover);
+}
+
+/*============== Section2 ==============*/
+
+.divider {
+  background: white;
+  width: 100%;
+  height: 2rem;
+}
+
+.back2 {
+  background: var(--color-section);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/*======= Skills =======*/
+.skills {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.boxskills {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.text2 {
+  font: 300 var(--text-font1-size) var(--text-font);
+  color: var(--color-text2);
+  letter-spacing: 2px;
+}
+
+.boxskills p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.backp {
+  width: 80%;
+  height: 12px;
+  background: rgba(232, 236, 244, 100%);
+  border-radius: 6px;
+}
+
+.porcentagemHTML {
+  width: 50%;
+  height: 12px;
+  background: rgba(228, 77, 38, 100%);
+  border-radius: 6px;
+}
+
+.porcentagemjava {
+  width: 30%;
+  height: 12px;
+  background: rgba(246, 222, 10, 100%);
+  border-radius: 6px;
+}
+
+#boxback {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/*============== Section3 ==============*/
+
+.projetos {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.boxproject {
+  margin-top: 4rem;
+}
+
+.project {
+  width: 100%;
+  height: 600px;
+  background: grey;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+/*======= CTA =======*/
+.cta {
+  margin-bottom: 6rem;
+}
+
+.cta h2 {
+  color: var(--color-link);
+}
+
+.cta h2:hover {
+  color: var(--color-link-hover);
+}
+
+/*============== Footer ==============*/
+
+.footer {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.ifcontato h2 {
+  font-size: 1.5rem;
+}
+
+.ifcontato p {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+
+.datual {
+  margin-top: 4rem;
+}
+
+#assinatura {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.iconsF {
+  width: 2rem;
+}
+
+.iconsfooter {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.boxif {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.iconsfooter a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+div.iconsfooter a:hover {
+  transform: translateY(-6px);
+}
